@@ -1,0 +1,104 @@
+:root {
+  /* colors */
+  --main-nutmeg: hsl(14, 45%, 36%);
+  --main-dkRasp: hsl(332, 51%, 32%);
+  --main-white: hsl(0, 0%, 100%);
+  --main-roseWhite: hsl(330, 100%, 98%);
+  --main-eggshell: hsl(30, 54%, 90%);
+  --main-ltGray: hsl(30, 18%, 87%);
+  --main-wengeBrown: hsl(30, 10%, 34%);
+  --main-dkCharcoal: hsl(24, 5%, 18%);
+
+  /* font weights */
+  --weight-light: 400;
+  --weight-med: 600;
+  --weight-bold: 700;
+
+  /* font families */
+  --font-youngSerif: "Young Serif", sans-serif; /* major headings*/
+  --font-outfit: "Outfit", sans-serif; /* paragraph text*/
+
+  /* screen width defaults*/
+  --width-desktop: 1440px;
+  --width-mobile: 375px;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* general stylings */
+body {
+  font-size: 16px;
+  background-color: var(--main-eggshell);
+  font-family: var(--font-outfit);
+  color: var(--main-wengeBrown);
+  font-weight: var(--weight-light);
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 130vh;
+}
+
+h1, h2{
+    font-family: var(--font-youngSerif);
+}
+
+h3 {
+    color: var(--main-dkRasp);
+}
+
+img {
+    width: 100%;
+    border-radius: .25rem;
+}
+
+section {
+    margin: 1rem;
+    
+}
+
+hr {
+    background-color: var(--main-ltGray);
+    height: 1px;
+    border: none;
+}
+
+#container {
+    background: var(--main-white);
+    max-width: var(--width-desktop);
+    min-width: var(--width-mobile);
+    width: 33rem;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: .5rem;
+}
+
+.preparationTime{
+    background-color: var(--main-roseWhite);
+}
+
+.description {
+    font-size: .75rem;
+}
+
+/* pre-included attribution css moved from index <style> */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
