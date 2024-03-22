@@ -1,13 +1,13 @@
 :root {
   /* colors */
-  --main-nutmeg: hsl(14, 45%, 36%);
-  --main-dkRasp: hsl(332, 51%, 32%);
-  --main-white: hsl(0, 0%, 100%);
-  --main-roseWhite: hsl(330, 100%, 98%);
-  --main-eggshell: hsl(30, 54%, 90%);
-  --main-ltGray: hsl(30, 18%, 87%);
-  --main-wengeBrown: hsl(30, 10%, 34%);
-  --main-dkCharcoal: hsl(24, 5%, 18%);
+  --clr-nutmeg: hsl(14, 45%, 36%);
+  --clr-dkRasp: hsl(332, 51%, 32%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-roseWhite: hsl(330, 100%, 98%);
+  --clr-eggshell: hsl(30, 54%, 90%);
+  --clr-ltGray: hsl(30, 18%, 87%);
+  --clr-wengeBrown: hsl(30, 10%, 34%);
+  --clr-dkCharcoal: hsl(24, 5%, 18%);
 
   /* font weights */
   --weight-light: 400;
@@ -37,9 +37,9 @@
 /* general stylings */
 body {
   font-size: 16px;
-  background-color: var(--main-eggshell);
+  background-color: var(--clr-eggshell);
   font-family: var(--font-outfit);
-  color: var(--main-wengeBrown);
+  color: var(--clr-wengeBrown);
   font-weight: var(--weight-light);
   line-height: 1.5;
 }
@@ -49,50 +49,103 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 130vh;
+  min-height: 150vh;
 }
 
 h1, h2{
     font-family: var(--font-youngSerif);
 }
 
+h1 {
+    color: var(--clr-dkCharcoal);
+    font-size: 32px;
+    font-weight: var(--weight-light);
+}
+
+h2 {
+    color: var(--clr-nutmeg);
+    font-weight: var(--weight-light);
+    margin-bottom: 1rem;
+}
+
 h3 {
-    color: var(--main-dkRasp);
+    color: var(--clr-dkRasp);
+    margin-bottom: .5rem;
 }
 
 img {
     width: 100%;
-    border-radius: .25rem;
+    border-radius: .5rem;
 }
 
 section {
-    margin: 1rem;
-    
+    margin: 1.5rem 0rem;
 }
 
 hr {
-    background-color: var(--main-ltGray);
+    background-color: var(--clr-ltGray);
     height: 1px;
     border: none;
 }
 
+li {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    line-height: 2;
+}
+
+/* id stylings */
 #container {
-    background: var(--main-white);
+    background: var(--clr-white);
     max-width: var(--width-desktop);
     min-width: var(--width-mobile);
     width: 33rem;
-    padding: 1.5rem;
-    margin: 1rem;
+    padding: 2rem;
+    margin: 5rem 0;
     border-radius: .5rem;
 }
 
-.preparationTime{
-    background-color: var(--main-roseWhite);
+/* class stylings */
+.description {
+    font-size: .7rem;
+    margin-top: .5rem;
 }
 
-.description {
+.preparationTime{
+    background-color: var(--clr-roseWhite);
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: .9rem;
+}
+
+.preparationTime li::marker{
+    color: var(--clr-dkRasp);
     font-size: .75rem;
 }
+
+.ingredients {
+    font-size: .9rem;
+}
+
+.ingredients li::marker, .instructions li::marker {
+    color: var(--clr-nutmeg);
+}
+
+.ingredients li::marker {
+    font-size: .75rem;
+}
+
+.instructions li {
+    font-size: .7rem;
+    line-height: 1.5;
+    font-weight: var(--weight-light);
+    padding-bottom: .5rem;
+}
+
+.instructions li::marker {
+    font-weight: var(--weight-bold);
+}
+
 
 /* pre-included attribution css moved from index <style> */
 .attribution {
