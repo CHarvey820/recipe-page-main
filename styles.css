@@ -49,7 +49,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 150vh;
+  min-height: 205vh;
 }
 
 h1, h2{
@@ -58,13 +58,15 @@ h1, h2{
 
 h1 {
     color: var(--clr-dkCharcoal);
-    font-size: 32px;
     font-weight: var(--weight-light);
+    font-size: 2.5rem;
+
 }
 
 h2 {
     color: var(--clr-nutmeg);
     font-weight: var(--weight-light);
+    font-size: 1.75rem;
     margin-bottom: 1rem;
 }
 
@@ -75,11 +77,15 @@ h3 {
 
 img {
     width: 100%;
-    border-radius: .5rem;
+    border-radius: 1rem;
 }
 
 section {
     margin: 1.5rem 0rem;
+}
+
+section:last-of-type{
+    margin-bottom: 0;
 }
 
 hr {
@@ -94,37 +100,42 @@ li {
     line-height: 2;
 }
 
+td, th {
+    border-bottom: 1px solid var(--clr-ltGray);
+    width: 50%;
+}
+
+tr:last-of-type td{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 /* id stylings */
 #container {
     background: var(--clr-white);
     max-width: var(--width-desktop);
     min-width: var(--width-mobile);
-    width: 33rem;
-    padding: 2rem;
-    margin: 5rem 0;
-    border-radius: .5rem;
+    width: 736px;
+    padding: 2.5rem;
+    margin: 5rem;
+    border-radius: 1rem;
 }
 
 /* class stylings */
 .description {
-    font-size: .7rem;
     margin-top: .5rem;
 }
 
 .preparationTime{
     background-color: var(--clr-roseWhite);
-    border-radius: .5rem;
-    padding: 1rem;
-    font-size: .9rem;
+    border-radius: 1rem;
+    padding: 2rem;
 }
 
 .preparationTime li::marker{
     color: var(--clr-dkRasp);
     font-size: .75rem;
-}
-
-.ingredients {
-    font-size: .9rem;
 }
 
 .ingredients li::marker, .instructions li::marker {
@@ -136,7 +147,6 @@ li {
 }
 
 .instructions li {
-    font-size: .7rem;
     line-height: 1.5;
     font-weight: var(--weight-light);
     padding-bottom: .5rem;
@@ -146,6 +156,10 @@ li {
     font-weight: var(--weight-bold);
 }
 
+.table-first {
+    text-align: left;
+    padding-right: 10.5rem;
+}
 
 /* pre-included attribution css moved from index <style> */
 .attribution {
