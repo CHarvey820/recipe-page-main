@@ -100,9 +100,14 @@ li {
     line-height: 2;
 }
 
-td, th {
+table {
+    width: 100%;
+    margin-top: 1rem;;
+}
+
+td {
     border-bottom: 1px solid var(--clr-ltGray);
-    width: 50%;
+    padding: .5rem;
 }
 
 tr:last-of-type td{
@@ -120,6 +125,7 @@ tr:last-of-type td{
     padding: 2.5rem;
     margin: 5rem;
     border-radius: 1rem;
+    transition: ease all .5s;
 }
 
 /* class stylings */
@@ -156,9 +162,15 @@ tr:last-of-type td{
     font-weight: var(--weight-bold);
 }
 
-.table-first {
+.table-first-col {
     text-align: left;
-    padding-right: 10.5rem;
+    padding-left: 1rem;
+    width: 50%;
+}
+
+.table-amount {
+    color: var(--clr-nutmeg);
+    font-weight: var(--weight-med);
 }
 
 /* pre-included attribution css moved from index <style> */
@@ -168,4 +180,17 @@ tr:last-of-type td{
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+/* Media Query Styling*/
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 1;
+    }
+    #container {
+        max-width: var(--width-mobile);
+    }
 }
